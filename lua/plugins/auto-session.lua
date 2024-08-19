@@ -11,7 +11,8 @@ return {
     { "<leader>wat", "<cmd>SessionToggleAutoSave<CR>", desc = "Toggle autosave" },
   },
   config = function()
-    require("auto-session").setup {
+    local auto_session = require "auto-session"
+    auto_session.setup {
       auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
       session_lens = {
         -- If load_on_setup is false, make sure you use `:SessionSearch` to open the picker as it will initialize everything first
