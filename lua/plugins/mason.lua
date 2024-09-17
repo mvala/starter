@@ -20,12 +20,48 @@ return {
     mason_tool_installer.setup {
       ensure_installed = {
         "lua-language-server",
-        "stylua", -- lua formatter
+        "stylua",
+
+        -- c/c++
         "clangd",
         "clang-format",
+
+        -- rust
         "rust-analyzer",
+
+        -- go
         "gopls",
-        "prettier", -- prettier formatter
+
+        -- web dev
+        "css-lsp",
+        "html-lsp",
+        "typescript-language-server",
+        "emmet-ls",
+        "json-lsp",
+        "prettier",
+        "eslint-lsp",
+
+        -- shell
+        "bash-language-server",
+        "shfmt",
+        "shellcheck",
+
+        -- python
+        "pyright",
+        "black",
+
+        -- yaml
+        "yaml-language-server",
+
+        -- ansible
+        "ansible-language-server",
+        "ansible-lint",
+
+        -- docker
+        "dockerfile-language-server",
+
+        -- terraform
+        "terraform-ls",
       },
     }
   end,
