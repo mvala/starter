@@ -21,6 +21,8 @@ return {
       ensure_installed = {
         "lua-language-server",
         "stylua",
+        -- json
+        "vscode-json-language-server",
 
         -- c/c++
         "clangd",
