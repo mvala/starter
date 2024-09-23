@@ -25,7 +25,7 @@ return {
         -- c/c++
         "clangd",
         "clang-format",
-
+        "cpptools",
         -- rust
         "rust-analyzer",
 
@@ -33,17 +33,17 @@ return {
         "gopls",
 
         -- web dev
-        "css-lsp",
-        "html-lsp",
-        "typescript-language-server",
-        "emmet-ls",
-        "json-lsp",
-        "prettier",
-        "eslint-lsp",
+        -- "css-lsp",
+        -- "html-lsp",
+        -- "typescript-language-server",
+        -- "emmet-ls",
+        -- "json-lsp",
+        -- "prettier",
+        -- "eslint-lsp",
 
         -- shell
         "bash-language-server",
-        "shfmt",
+        -- "shfmt",
         "shellcheck",
 
         -- python
