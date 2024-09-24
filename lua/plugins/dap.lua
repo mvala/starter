@@ -11,7 +11,46 @@ return {
     config = function()
       local dap = require "dap"
       local dapui = require "dapui"
-      dapui.setup()
+      dapui.setup {
+        layouts = {
+          {
+            elements = {
+              {
+                id = "scopes",
+                size = 0.25,
+              },
+              {
+                id = "breakpoints",
+                size = 0.25,
+              },
+              {
+                id = "stacks",
+                size = 0.25,
+              },
+              {
+                id = "watches",
+                size = 0.25,
+              },
+            },
+            position = "left",
+            size = 40,
+          },
+          {
+            elements = {
+              {
+                id = "repl",
+                size = 0.3,
+              },
+              {
+                id = "console",
+                size = 0.7,
+              },
+            },
+            position = "right",
+            size = 100,
+          },
+        },
+      }
       dap.listeners.before.attach["dapui_config"] = function()
         dapui.open()
       end
@@ -85,6 +124,12 @@ return {
       if vim.fn.filereadable ".vscode/launch.json" then
         vscode.load_launchjs()
       end
+
+      vim.fn.sign_define("DapStopped", { text = "", texthl = "DiagnosticWarn" })
+      vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DiagnosticError" })
+      -- vim.fn.sign_define("DapBreakpointRejected", { text = "", texthl = "DiagnosticError" })
+      -- vim.fn.sign_define("DapBreakpointCondition", { text = "", texthl = "DiagnosticInfo" })
+      -- vim.fn.sign_define("DapLogPoint", { text = ".>", texthl = "DiagnosticInfo" })
     end,
   },
   {
